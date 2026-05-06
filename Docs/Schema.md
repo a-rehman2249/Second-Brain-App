@@ -1,10 +1,10 @@
 ![alt text](image.png)
 
 ## Tables
-User
-Content
-Tag
-Link
+- User
+- Content
+- Tag
+- Link
 
 
 ## Design desicion
