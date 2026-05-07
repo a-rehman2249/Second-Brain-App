@@ -1,6 +1,6 @@
 import mongoose,{model , Schema} from "mongoose";
 
-const connectdb = async()=>{
+export const connectdb = async()=>{
     try{
         await mongoose.connect("mongodb://localhost:27017/second_brain_clone");
         console.log("Database connected successfully");
@@ -18,8 +18,6 @@ const connectdb = async()=>{
         //app will not be longer running after this
     }
 }
-
-connectdb();
 
 
 //Now Given below will look a bit confusing as I am using type script and still not specifying types as mongoose and typescript works magically here specifying the type but still on runtime if some give password 123 an int the typescript may notbe able to caught it so or that it's a better approch to make an interface for user specyfying types

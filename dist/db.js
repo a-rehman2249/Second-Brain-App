@@ -33,7 +33,7 @@ var __importStar = (this && this.__importStar) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.linkModel = exports.tagModel = exports.contentModel = exports.userModel = void 0;
+exports.linkModel = exports.tagModel = exports.contentModel = exports.userModel = exports.connectdb = void 0;
 const mongoose_1 = __importStar(require("mongoose"));
 const connectdb = async () => {
     try {
@@ -52,7 +52,7 @@ const connectdb = async () => {
         //app will not be longer running after this
     }
 };
-connectdb();
+exports.connectdb = connectdb;
 //Now Given below will look a bit confusing as I am using type script and still not specifying types as mongoose and typescript works magically here specifying the type but still on runtime if some give password 123 an int the typescript may notbe able to caught it so or that it's a better approch to make an interface for user specyfying types
 //  const userSchema = new Schema<IUser>({
 //      username: { type: String, required: true, unique: true },
